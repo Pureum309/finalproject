@@ -1,4 +1,4 @@
-import { React } from 'react';
+import styles from '@/styles/Home.module.css'
 
 export default function BottomCard({
     txtHeading = "Heading Text...",
@@ -6,8 +6,8 @@ export default function BottomCard({
 
 }) {
     return (
-        <div className="cont" style={styles.cont}>
-            <div className="innerCont" style={styles.innerCont}>
+        <div className={styles.bottomCont}>
+            <div className={styles.bottomInnerCont}>
                 <h3>{txtHeading}</h3>
                 <p>{txt}</p>
             </div>
@@ -15,27 +15,3 @@ export default function BottomCard({
     )
 }
 
-const styles = {
-    cont: {
-        width: "80%",
-        height: "15em",
-        backgroundColor: "grey",
-
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-       
-
-    },
-
-    innerCont: {
-        width: "70%",
-        height: "10em",
-        backgroundColor: "white",
-
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-}
