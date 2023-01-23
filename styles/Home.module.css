@@ -282,7 +282,11 @@
 /*********************************************
 Main CSS come below
 **********************************************/
+
+/* Logo Style */
 .moodyLogo {
-  width: 10%;
+  width: 6em;
   padding: 1em;
 }
+
+/* Bottome Card style */

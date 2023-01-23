@@ -4,6 +4,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 import Logo from '@/components/logo'
+import BottomCard from '@/components/postCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -120,6 +121,10 @@ export default function Home() {
           </a>
         </div> */}
         <Logo />
+        <BottomCard 
+          txtHeading = "Shopping made seamless"
+          txt="Free shipping, Free returns"
+        />
       </main>
     </>
   )
