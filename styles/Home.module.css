@@ -286,3 +286,8 @@ Main CSS come below
   width: 10%;
   padding: 1em;
 }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+}
