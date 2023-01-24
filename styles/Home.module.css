@@ -289,6 +289,57 @@ Main CSS come below
   padding: 1em;
 }
 
+/* Category Branch */
+.weathercard {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  width: 30%;
+  height: 20%;
+  padding: 2em;
+  border-radius: 1em;
+  margin: auto;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;
+  font-size: 3em;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+}
+
+.categorycard {
+  background-color: rgb(202, 237, 237);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 3em;
+  padding: 3em;
+}
+
+.categorycont {
+  background-color: rgb(202, 237, 237);
+  width: 20%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryimg {
+  background-color: rgb(81, 81, 81);
+  border-radius: 3em;
+  width:80%;
+  height:100%;
+}
+
+.categorytxt {
+  margin: 0.5em;
+
 /* Bottome Card style */
 .bottomCont {
   width: "80%";

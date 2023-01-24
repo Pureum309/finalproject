@@ -4,11 +4,25 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 import Logo from '@/components/logo'
+import Weather from '@/components/weather'
+import CategoryCard from '@/components/categoryCard'
 import BottomCard from '@/components/postCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({
+  cat1="Top",
+  cat2="Bottoms",
+  cat3="Dresss",
+  cat4="Bags",
+  cat5="Shoes",
+  catimg1="./tops_placeholder.png",
+  catimg2="./bottom_plaecholder.png",
+  catimg3="./dress_placeholder.png",
+  catimg4="./bag_placeholder.png",
+  catimg5="./shoes_placeholder.png",
+  
+}) { 
   return (
     <>
       <Head>
@@ -121,6 +135,17 @@ export default function Home() {
           </a>
         </div> */}
         <Logo />
+
+        <Weather />
+
+        <div className={styles.categorycard}>
+          <CategoryCard txt={cat1} img={catimg1} />
+          <CategoryCard txt={cat2} img={catimg2}/>
+          <CategoryCard txt={cat3} img={catimg3}/>
+          <CategoryCard txt={cat4} img={catimg4}/>
+          <CategoryCard txt={cat5} img={catimg5}/>
+        </div>
+
         <BottomCard 
           txtHeading = "Shopping made seamless"
           txt="Free shipping, Free returns"
