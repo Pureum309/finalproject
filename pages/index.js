@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css'
 import Logo from '@/components/logo'
 import Weather from '@/components/weather'
 import CategoryCard from '@/components/categoryCard'
+import BottomCard from '@/components/postCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -145,6 +146,10 @@ export default function Home({
           <CategoryCard txt={cat5} img={catimg5}/>
         </div>
 
+        <BottomCard 
+          txtHeading = "Shopping made seamless"
+          txt="Free shipping, Free returns"
+        />
       </main>
     </>
   )

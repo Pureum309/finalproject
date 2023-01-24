@@ -282,11 +282,14 @@
 /*********************************************
 Main CSS come below
 **********************************************/
+
+/* Logo Style */
 .moodyLogo {
-  width: 10%;
+  width: 6em;
   padding: 1em;
 }
 
+/* Category Branch */
 .weathercard {
   display: flex;
   flex-direction: column;
@@ -336,4 +339,48 @@ Main CSS come below
 
 .categorytxt {
   margin: 0.5em;
+
+/* Bottome Card style */
+.bottomCont {
+  width: "80%";
+  height: 20em;
+  background-color: grey;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomInnerCont {
+  width: 70%;
+  height: 20em;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 501px) {
+  .bottomCont {
+    width: "50%";
+    height: 20em;
+    background-color: grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottomInnerCont {
+    width: 70%;
+    height: 10em;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
