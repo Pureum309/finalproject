@@ -7,6 +7,7 @@ import Logo from '@/components/logo'
 import Weather from '@/components/weather'
 import CategoryCard from '@/components/categoryCard'
 import BottomCard from '@/components/postCard'
+import ListItem from '@/components/listItem'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -154,6 +155,12 @@ export default function Home({
           <CategoryCard txt={cat4} img={catimg4}/>
           <CategoryCard txt={cat5} img={catimg5}/>
         </div>
+        <div className={styles.heading}>
+          <a className={styles.mostPopular}>Most Popular</a>
+          <a className={styles.seeAll}>See All</a>
+        </div>
+        <ListItem/>
+
 
         <BottomCard 
           txtHeading = "Shopping made seamless"
