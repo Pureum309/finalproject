@@ -65,6 +65,57 @@
   transform: translate(0, -11px) rotate(45deg);
 }
 
+.item1, .item2, .item3, .item4 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #D9D9D9;
+  justify-content: center;
+  display: flex;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+}
+ 
+.item1 div, .item2 div, .item3 div, .item4 div {
+  width: 150px;
+  height: 150px;
+  margin-top: 25px;
+  background-color: white;
+}
+
+.items a{
+  margin: 5px;
+}
+
+.heading{
+  color: black;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+}
+.seeAll{
+float: right;
+margin-right: 50px;
+}
+
+.mostPopular{
+  margin-left: 50px;
+}
+
+.mainitem{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 250px));
+  justify-content: center;
+}
+
+.items{
+  display: grid;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+  
+
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
@@ -218,6 +269,10 @@
 
   .card h2 {
     margin-bottom: 0.5rem;
+  }
+  
+  .mainitem{
+    display: grid;
   }
 
   .center {
