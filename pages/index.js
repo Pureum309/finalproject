@@ -11,10 +11,15 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({
   cat1="Top",
-  cat2="Pants",
+  cat2="Bottoms",
   cat3="Dresss",
   cat4="Bags",
   cat5="Shoes",
+  catimg1="./tops_placeholder.png",
+  catimg2="./bottom_plaecholder.png",
+  catimg3="./dress_placeholder.png",
+  catimg4="./bag_placeholder.png",
+  catimg5="./shoes_placeholder.png",
   
 }) { 
   return (
@@ -133,11 +138,11 @@ export default function Home({
         <Weather />
 
         <div className={styles.categorycard}>
-          <CategoryCard txt={cat1} />
-          <CategoryCard txt={cat2}/>
-          <CategoryCard txt={cat3}/>
-          <CategoryCard txt={cat4}/>
-          <CategoryCard txt={cat5}/>
+          <CategoryCard txt={cat1} img={catimg1} />
+          <CategoryCard txt={cat2} img={catimg2}/>
+          <CategoryCard txt={cat3} img={catimg3}/>
+          <CategoryCard txt={cat4} img={catimg4}/>
+          <CategoryCard txt={cat5} img={catimg5}/>
         </div>
 
       </main>

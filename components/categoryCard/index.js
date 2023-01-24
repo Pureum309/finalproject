@@ -2,7 +2,9 @@ import styles from '@/styles/Home.module.css'
 
 export default function CategoryCard({
 
-    txt = "Tops"
+    txt = "Tops",
+    img = "./dress_placeholder.png"
+
 }){
 
     return (
@@ -10,7 +12,7 @@ export default function CategoryCard({
             <div className={styles.categorycont}>
                 <img 
                     className={styles.categoryimg}
-                    src = "./dress_placeholder.png" 
+                    src = {img}
                 />
                 <div className={styles.categorytxt}>
                     {txt}

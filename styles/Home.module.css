@@ -330,7 +330,8 @@ Main CSS come below
 .categoryimg {
   background-color: rgb(81, 81, 81);
   border-radius: 3em;
-  width:70%;
+  width:80%;
+  height:100%;
 }
 
 .categorytxt {
