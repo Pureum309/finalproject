@@ -134,7 +134,16 @@ export default function Home({
             </p>
           </a>
         </div> */}
-        <Logo />
+
+      <div>
+      <Logo /> 
+      <div className={styles.container } onclick="myFunction(this)">
+      <div className={styles.bar1}></div>
+      <div className={styles.bar2}></div>
+      <div className={styles.bar3}></div>
+      </div>
+      </div>
+
 
         <Weather />
 
