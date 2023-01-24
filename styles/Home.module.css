@@ -309,3 +309,30 @@ Main CSS come below
   flex-direction: column;
   font-size: 2em;
 }
+
+.categorycard {
+  background-color: rgb(202, 237, 237);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 3em;
+  padding: 3em;
+}
+
+.categorycont {
+  background-color: rgb(202, 237, 237);
+  width: 20%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryimg {
+  background-color: rgb(81, 81, 81);
+  border-radius: 3em;
+  width:70%;
+}
+
+.categorytxt {
+  margin: 0.5em;
+}

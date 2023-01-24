@@ -5,10 +5,18 @@ import styles from '@/styles/Home.module.css'
 
 import Logo from '@/components/logo'
 import Weather from '@/components/weather'
+import CategoryCard from '@/components/categoryCard'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({
+  cat1="Top",
+  cat2="Pants",
+  cat3="Dresss",
+  cat4="Bags",
+  cat5="Shoes",
+  
+}) { 
   return (
     <>
       <Head>
@@ -121,7 +129,17 @@ export default function Home() {
           </a>
         </div> */}
         <Logo />
+
         <Weather />
+
+        <div className={styles.categorycard}>
+          <CategoryCard txt={cat1} />
+          <CategoryCard txt={cat2}/>
+          <CategoryCard txt={cat3}/>
+          <CategoryCard txt={cat4}/>
+          <CategoryCard txt={cat5}/>
+        </div>
+
       </main>
     </>
   )
