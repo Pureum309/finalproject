@@ -20,8 +20,9 @@ export default function Recommend({
         </Head>
         <main className={styles.main}>
 
-          <WeatherLocation />
-  
+          <div className={styles.weathercard_square}>
+            <WeatherLocation />
+          </div>
         </main>
       </>
     )

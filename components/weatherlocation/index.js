@@ -45,7 +45,7 @@ export default function WeatherLocation() {
   }
   return (
     <>
-
+    
         <div className={styles.input}>
           <div className={styles.errormessage}>
             {ErrorMessange}
@@ -64,10 +64,12 @@ export default function WeatherLocation() {
            <>
 
         <div className={styles.locationcont}>
-          <img className={styles.locationicon} src="./clear.png"/>
+          
           <div className={styles.location}>
             {data.name}
           </div>
+          
+          <img className={styles.locationicon} src="./clear.png"/>
         </div>
 
           <div className={styles.temp}>

@@ -6,6 +6,8 @@
   padding: 6rem; */
   min-height: 100vh;
   background-color: white;
+  font-family: 'Comfortaa', cursive;
+
 }
 
 .description {
@@ -379,18 +381,21 @@ Main CSS come below
   padding: 2em;
   border-radius: 1em;
   margin: auto;
+  align-items: center
 }
 
 .temp {
   display: flex;
   flex-direction: column;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .weather {
   display: flex;
   flex-direction: column;
-  font-size: 2em;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 /* Category Card Branch */
@@ -444,6 +449,62 @@ Main CSS come below
   justify-content: center;
   align-items: center;
 }
+
+/* Recommend page */
+.weathercard_square {
+    background-color: rgb(202, 237, 237);
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    padding: 3em;
+    align-items: center;
+    width:30%;
+    border-radius: 20px;
+  }
+
+
+/* WeatherLocation    */
+.input input {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border-radius: 20px;
+  border-color: rgb(188, 185, 185);
+  height: 3em;
+  width: 100%;
+  font-size: 14pt;
+  color:rgb(76, 77, 77);
+  margin-top:0.5em;
+  margin-bottom:1em;
+  padding-left: 1em;
+  font-family: 'Comfortaa', cursive;
+}
+
+.errormessage {
+  font-size:20px;
+  align-items: center;
+  justify-content: center;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+  color: rgb(221, 114, 60);
+  padding-left: 1em;
+}
+
+.locationcont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  font-size: 2em;
+  margin: auto;
+}
+
+.locationcont img {
+  width:20%;
+  margin-left: 1em;
+}
+
 
 @media (max-width: 501px) {
   .bottomCont {
