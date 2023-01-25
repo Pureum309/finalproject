@@ -1,15 +1,15 @@
 import styles from '@/styles/Home.module.css'
 import axios from 'axios'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ListItem(){
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState(null);
 
     const options = {
         method: 'GET',
         url: 'https://unofficial-shein.p.rapidapi.com/products/search',
         params: {
-          keywords: 'jacket',
+          keywords: 'Women Top and Bottom',
           language: 'en',
           country: 'US',
           currency: 'USD',
@@ -18,23 +18,28 @@ export default function ListItem(){
           page: '1'
         },
         headers: {
-          'X-RapidAPI-Key': '8db434156fmsh8abfd27620c9887p121d34jsn2447b940325c',
+          'X-RapidAPI-Key': '7c2b8fa67amshc778ca1794495a2p144c0djsn30fa174cd401',
           'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
         }
       };
 
-    
-    axios.request(options)
+      useEffect(() => {
+          const loadData = async () => {
+            await axios.request(options)
             .then((response) => {
-            console.clear();
-            console.log(response.data);
-            setProduct(response.data.info.products);
-        }).catch(function (error) {
-            console.error(error);
-            // setProduct([]);
-        });
+                // console.clear();
+                console.log(response.data);
+                setProduct(response.data.info.products);
+            }).catch(function (error) {
+                console.error(error);
+                // setProduct([]);
+            });
+          }
 
-    return (
+          loadData();
+      }, []);
+
+        return (
             <>
             <div className={styles.mainitem}>
                 {product != null && product.length > 0 && product.map((item, index) => (
