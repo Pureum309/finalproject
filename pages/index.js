@@ -161,7 +161,6 @@ export default function Home({
         </div>
         <ListItem/>
 
-
         <BottomCard 
           txtHeading = "Shopping made seamless"
           txt="Free shipping, Free returns"
