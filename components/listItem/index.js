@@ -7,10 +7,9 @@ export default function ListItem(){
 
     const options = {
         method: 'GET',
-        url: 'https://unofficial-shein.p.rapidapi.com/products/list',
+        url: 'https://unofficial-shein.p.rapidapi.com/products/search',
         params: {
-          cat_id: '1980',
-          adp: '10170797',
+          keywords: 'jacket',
           language: 'en',
           country: 'US',
           currency: 'USD',
@@ -19,10 +18,11 @@ export default function ListItem(){
           page: '1'
         },
         headers: {
-          'X-RapidAPI-Key': '08f7b71a5dmsh33c5dbaf83cb8b8p190223jsn8265577bbee3',
+          'X-RapidAPI-Key': '8db434156fmsh8abfd27620c9887p121d34jsn2447b940325c',
           'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
         }
-    };
+      };
+
     
     axios.request(options)
             .then((response) => {
@@ -31,13 +31,13 @@ export default function ListItem(){
             setProduct(response.data.info.products);
         }).catch(function (error) {
             console.error(error);
-            setProduct();
+            // setProduct([]);
         });
 
     return (
             <>
             <div className={styles.mainitem}>
-                {product.map((item, index) => (
+                {product != null && product.length > 0 && product.map((item, index) => (
                     <div className={styles.items} key={index}>
                     <div className = {styles.item1}>
                         <div>
