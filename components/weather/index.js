@@ -42,7 +42,7 @@ export default function Weather() {
             </div>
 
             <div className={styles.weather}>
-                It's {weather} today 
+                {weather && weather.toUpperCase()}
             </div>
 
             <div className={styles.recommendText}>

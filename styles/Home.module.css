@@ -492,7 +492,7 @@ Main CSS come below
 
 .locationcont {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 2em;
@@ -504,6 +504,16 @@ Main CSS come below
   width:20%;
   margin-left: 1em;
 }
+
+.locationtemp {
+  font-size: 1em;
+}
+
+.locationweather {
+  font-size: 0.7em;
+}
+
+
 
 
 @media (max-width: 501px) {

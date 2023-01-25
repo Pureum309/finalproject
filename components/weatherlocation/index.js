@@ -29,7 +29,7 @@ export default function WeatherLocation() {
         console.clear();
         setData(response.data)
         console.log(response.data);
-        setWeather(response.data.weather);
+        setWeather(response.data.weather[0].description);
         setTemp(response.data.main.temp);
         setDisplay(true);
         setErrorMessange("")
@@ -63,36 +63,23 @@ export default function WeatherLocation() {
     {display ? 
            <>
 
-        <div className={styles.locationcont}>
+      <div className={styles.locationcont}>
           
           <div className={styles.location}>
             {data.name}
           </div>
           
           <img className={styles.locationicon} src="./clear.png"/>
-        </div>
 
-          <div className={styles.temp}>
+
+          <div className={styles.locationtemp}>
               {temp} °C
           </div>
 
-          <div className={styles.datacont}>
-            {
-              weather && weather.map((w,index)=> {
-                return(
-                  <div className={styles.indexcont}>
-                    
-                      <div className={styles.description}>
-                        {w.description.toUpperCase()}
-                      </div>
-
-                  </div>
-                )
-              })
-            }
-
-          </div>
-
+            <div className={styles.locationweather}>
+              {weather && weather.toUpperCase()}
+            </div>
+        </div>
 
         </> : null
     }
