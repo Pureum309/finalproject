@@ -501,8 +501,8 @@ Main CSS come below
 }
 
 .locationcont img {
-  width:20%;
-  margin-left: 1em;
+  width:50%;
+  /* margin-left: 1em; */
 }
 
 .locationtemp {

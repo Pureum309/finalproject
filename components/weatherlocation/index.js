@@ -15,6 +15,7 @@ export default function WeatherLocation() {
   const [ErrorMessange, setErrorMessange] = useState('');
   const [temp, setTemp] = useState();
   const [display, setDisplay] = useState(false);
+  const [image, setImage] = useState("");
 
   var apiKey = "8ca7e2dc56cc6762826d7af08501be29";
   var lang = "en";
@@ -32,6 +33,7 @@ export default function WeatherLocation() {
         setWeather(response.data.weather[0].description);
         setTemp(response.data.main.temp);
         setDisplay(true);
+        setImage(response.data.weather[0].icon);
         setErrorMessange("")
       }).catch(err => {
         console.log(err);
@@ -69,8 +71,7 @@ export default function WeatherLocation() {
             {data.name}
           </div>
           
-          <img className={styles.locationicon} src="./clear.png"/>
-
+          <img className={styles.locationicon} src={`icons/${data.weather[0].icon}.png`}/>
 
           <div className={styles.locationtemp}>
               {temp} °C
