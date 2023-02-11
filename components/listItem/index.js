@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 
-export default function ListItem(){
+export default function ListItem(props){
     const [product, setProduct] = useState(null);
 
     const options = {
@@ -42,7 +42,7 @@ export default function ListItem(){
         return (
             <>
             <div className={styles.mainitem}>
-                {product != null && product.length > 0 && product.map((item, index) => (
+                {product != null && product.length > 0 && product.slice(0,props.limit).map((item, index) => (
                     <div className={styles.items} key={index}>
                     <div className = {styles.item1}>
                         <div>

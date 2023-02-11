@@ -35,7 +35,6 @@ export default function Home({
       <main className={styles.main}>
         <div>
           <Logo 
-            onClickLogo={()=>{console.log("clickeddd")}}
             onClickMenu={()=>{console.log("menuClickedddd")}}
           /> 
         </div>
@@ -54,7 +53,7 @@ export default function Home({
             <a className={styles.mostPopular}>Most Popular</a>
             <a className={styles.seeAll} href="/products" >See All</a>
           </div>
-          <ListItem/>
+          <ListItem limit={10}/>
 
           <BottomCard 
             txtHeading = "Shopping made seamless"

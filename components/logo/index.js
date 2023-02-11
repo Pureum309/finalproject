@@ -1,15 +1,19 @@
+import React from 'react'
+import { Router, useRouter } from 'next/router'
+
 import styles from '@/styles/Home.module.css'
 
 export default function Logo({
-    onClickLogo,
     onClickMenu,
 }) {
+    const r = useRouter();
+
     return (
         <>
         <img 
             className={styles.moodyLogo}
             src = "./placeholder.jpeg" 
-            onClick={onClickLogo}
+            onClick={()=>{r.push("/")}}
         />
         <div className={styles.container } onClick={onClickMenu}>
             <div className={styles.bar1}></div>
