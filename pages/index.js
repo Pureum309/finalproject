@@ -53,7 +53,15 @@ export default function Home({
             <a className={styles.mostPopular}>Most Popular</a>
             <a className={styles.seeAll} href="/products" >See All</a>
           </div>
-          <ListItem limit={10}/>
+          <ListItem 
+            limit={10}
+            mainitem={styles.mainitem }
+            items={styles.items}
+            item1={styles.item1}
+            itemImage={styles.itemImage}
+            itemText={styles.itemText}
+
+          />
 
           <BottomCard 
             txtHeading = "Shopping made seamless"

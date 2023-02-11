@@ -41,16 +41,18 @@ export default function ListItem(props){
 
         return (
             <>
-            <div className={styles.mainitem}>
+            <div className={props.mainitem || props.productMainItem}>
                 {product != null && product.length > 0 && product.slice(0,props.limit).map((item, index) => (
-                    <div className={styles.items} key={index}>
-                    <div className = {styles.item1}>
-                        <div>
-                            <img className = {styles.itemImage} src= {item.goods_img}/>
+                    <div className={props.items || props.productItems} key={index}>
+                        <div className = {props.item1 || props.productItem1}>
+                            <div>
+                                <img className = {props.itemImage || props.productItemImage } src= {item.goods_img}/>
+                            </div>
+                        </div> 
+                        <div className={props.itemText || props.productItemText}>
+                            <a>{item.goods_name}</a> 
+                            <a>{item.salePrice.amountWithSymbol}</a>
                         </div>
-                    </div> 
-                        <a>{item.goods_name}</a> 
-                        <a>{item.salePrice.amountWithSymbol}</a>
                     </div>
                 ))}
             </div>
