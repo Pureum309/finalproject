@@ -152,6 +152,9 @@ padding: 10px;
   justify-content: center;
   align-items: center;
 }
+.mainitem:hover{
+  cursor: pointer;
+}
 .items{
   display: grid;
   justify-content: center;

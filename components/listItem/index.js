@@ -1,9 +1,11 @@
 import styles from '@/styles/Home.module.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function ListItem(props){
     const [product, setProduct] = useState(null);
+    const r = useRouter();
 
     const options = {
         method: 'GET',
@@ -39,11 +41,24 @@ export default function ListItem(props){
           loadData();
       }, []);
 
+      const handleClick = (select) => {
+          console.log("product clickkkkeeedddd!")
+          console.log(select)
+          console.log("end of select");
+          r.push({
+              pathname: '/productItem',
+              query: {
+                  title: select.goods_name,
+                  imgs: select.goods_img,
+                  price: select.salePrice.amountWithSymbol
+              }
+          })
+      }
         return (
             <>
             <div className={props.mainitem || props.productMainItem}>
                 {product != null && product.length > 0 && product.slice(0,props.limit).map((item, index) => (
-                    <div className={props.items || props.productItems} key={index}>
+                    <div className={props.items || props.productItems} key={index} onClick={() => handleClick(item)}>
                         <div className = {props.item1 || props.productItem1}>
                             <div>
                                 <img className = {props.itemImage || props.productItemImage } src= {item.goods_img}/>

@@ -8,7 +8,7 @@ export default function Image({
 
 return(
 <main className={styles.productMain}>
-<Product/>
+    <Product/>
 </main>
 
 )
