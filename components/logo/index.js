@@ -27,7 +27,7 @@ export default function Logo({
           <div class="logo">
           <img 
             className={styles.moodyLogo}
-            src = "./placeholder.jpeg" 
+            src = "./Moody.svg" 
             onClick={()=>{r.push("/")}}
         />
           </div>
