@@ -419,8 +419,11 @@ Main CSS come below
 
 /* Logo Style */
 .moodyLogo {
-  width: 6em;
-  padding: 1em;
+  width: 15em;
+  padding: 2em;
+  height: 12em;
+  margin-top: -3em;
+  margin-left: -39px;
 }
 
 /* Weather Branch */

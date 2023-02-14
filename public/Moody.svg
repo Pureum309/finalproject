@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: FredokaOne-Regular, 'Fredoka One';
+        font-size: 60px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.05em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(36.26 166.87)"><tspan x="0" y="0">MOO</tspan><tspan class="cls-2" x="145.2" y="0">D</tspan><tspan x="184.44" y="0">Y</tspan></text>
+</svg>
