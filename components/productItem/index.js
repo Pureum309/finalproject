@@ -18,7 +18,7 @@ export default function Product(){
 
             <div className={styles.productInfo}>
                 <div className={styles.amount}>{price}</div>
-                <button>Add to Cart</button>
+                <button className={styles.addcartbtn}>Add to Cart</button>
             </div>
 
         </div>
