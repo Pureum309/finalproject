@@ -1,0 +1,74 @@
+[
+ {
+  "UKSize": 4,
+  "BustIn": 31,
+  "BustCm": 78,
+  "WaistIn": 24,
+  "WaistCm": 60,
+  "HipsIn": 33,
+  "HipsCm": 83.5
+ },
+ {
+  "UKSize": 6,
+  "BustIn": 32,
+  "BustCm": 80.5,
+  "WaistIn": 26,
+  "WaistCm": 62.5,
+  "HipsIn": 34,
+  "HipsCm": 86
+ },
+ {
+  "UKSize": 8,
+  "BustIn": 33,
+  "BustCm": 83,
+  "WaistIn": 26,
+  "WaistCm": 65,
+  "HipsIn": 35,
+  "HipsCm": 88.5
+ },
+ {
+  "UKSize": 10,
+  "BustIn": 35,
+  "BustCm": 88,
+  "WaistIn": 28,
+  "WaistCm": 70,
+  "HipsIn": 37,
+  "HipsCm": 93.5
+ },
+ {
+  "UKSize": 12,
+  "BustIn": 37,
+  "BustCm": 93,
+  "WaistIn": 30,
+  "WaistCm": 75,
+  "HipsIn": 39,
+  "HipsCm": 98.5
+ },
+ {
+  "UKSize": 14,
+  "BustIn": 39,
+  "BustCm": 98,
+  "WaistIn": 31,
+  "WaistCm": 80,
+  "HipsIn": 41,
+  "HipsCm": 103.5
+ },
+ {
+  "UKSize": 16,
+  "BustIn": 41,
+  "BustCm": 103,
+  "WaistIn": 33,
+  "WaistCm": 85,
+  "HipsIn": 43,
+  "HipsCm": 108.5
+ },
+ {
+  "UKSize": 18,
+  "BustIn": 44,
+  "BustCm": 110.5,
+  "WaistIn": 36,
+  "WaistCm": 92.5,
+  "HipsIn": 46,
+  "HipsCm": 116
+ }
+]
