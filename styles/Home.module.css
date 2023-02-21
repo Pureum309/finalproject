@@ -611,6 +611,20 @@ Main CSS come below
   justify-content: flex-start
 }
 
+/* productItem  component */
+
+.product {
+  margin-top: 20px;
+}
+
+.productItem {
+  margin: auto;
+}
+
+.productInfo {
+  justify-content: center
+}
+
 /* size chart component */
 .sizechart {
   display: flex;
