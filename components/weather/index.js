@@ -14,7 +14,8 @@ export default function Weather() {
     // const [temp, setTemp] = useState();
     // const [weather, setWeather] = useState();
     const [weatherData, setWeatherData] = useState(null);
-    
+    const [icon, setIcon] = useState("");
+
     var apiKey = "8ca7e2dc56cc6762826d7af08501be29";
     var lang = "en";
     var units = "metric";
@@ -30,22 +31,48 @@ export default function Weather() {
                 // setTemp(response.data.main.temp);
                 // setWeather(response.data.weather[0].description);
                 console.log(response.data);
-                setWeatherData({temp: response.data.main.temp, weather: response.data.weather[0].description});
+                setWeatherData({
+                    temp: response.data.main.temp, 
+                    weather: response.data.weather[0].description, 
+                    condition: response.data.weather[0].main
+                });
+
+                if (response.data.weather[0].main == "Clouds") {
+                    setIcon("/icons/broken-clouds.png");
+                } else if (response.data.weather[0].main == "Clear") {
+                    setIcon("/icons/clear-sky.png");
+                } else if (response.data.weather[0].main == "Atmosphere") {
+                    setIcon("/icons/mist.png");
+                } else if (response.data.weather[0].main == "Rain") {
+                    setIcon("/icons/rain.png");
+                } else if (response.data.weather[0].main == "Drizzle") {
+                    setIcon("/icons/shower-rain.png");
+                } else if (response.data.weather[0].main == "Snow") {
+                    setIcon("/icons/snow.png");
+                } else if (response.data.weather[0].main == "Thunderstorm") {
+                    setIcon("/icons/thunderstorm.png");
+                }
             })
             .catch(err => {
-            console.log(err);
+                console.log(err);
             // setTemp();
             // setWeather();
             })
         }
 
         loadData();
+
     }, []);
-        
+
 
     return (
 
         <div className={styles.weathercard}>
+
+            <div className={styles.icon}>
+                {weatherData && <Image src={icon} alt="weather icon" width={100} height={100} />}
+            </div>
+
             <div className={styles.temp}>
                 {weatherData && weatherData.temp} °C
             </div>
