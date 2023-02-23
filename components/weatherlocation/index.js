@@ -11,9 +11,11 @@ const inter = Inter({ subsets: ['latin'] })
 export default function WeatherLocation() {
   const [location, setLocation] = useState('');
   const [data, setData] = useState({});
-  const [weather, setWeather] = useState();
+  // const [weather, setWeather] = useState();
+  const [weatherData, setWeatherData] = useState(null);
+  const [icon, setIcon] = useState("");
   const [ErrorMessange, setErrorMessange] = useState('');
-  const [temp, setTemp] = useState();
+  // const [temp, setTemp] = useState();
   const [display, setDisplay] = useState(false);
   // const [image, setImage] = useState("");
 
@@ -30,17 +32,38 @@ export default function WeatherLocation() {
         console.clear();
         setData(response.data)
         console.log(response.data);
-        setWeather(response.data.weather[0].description);
-        setTemp(response.data.main.temp);
+        // setWeather(response.data.weather[0].description);
+        // setTemp(response.data.main.temp);
+        setWeatherData({
+          temp: response.data.main.temp, 
+          weather: response.data.weather[0].description, 
+          condition: response.data.weather[0].main
+      });
         setDisplay(true);
-        // setImage(response.data.weather[0].icon);
         setErrorMessange("")
+
+      if (response.data.weather[0].main == "Clouds") {
+          setIcon("/icons/broken-clouds.png");
+      } else if (response.data.weather[0].main == "Clear") {
+          setIcon("/icons/clear-sky.png");
+      } else if (response.data.weather[0].main == "Atmosphere") {
+          setIcon("/icons/mist.png");
+      } else if (response.data.weather[0].main == "Rain") {
+          setIcon("/icons/rain.png");
+      } else if (response.data.weather[0].main == "Drizzle") {
+          setIcon("/icons/shower-rain.png");
+      } else if (response.data.weather[0].main == "Snow") {
+          setIcon("/icons/snow.png");
+      } else if (response.data.weather[0].main == "Thunderstorm") {
+          setIcon("/icons/thunderstorm.png");
+      }
+        
       }).catch(err => {
         console.log(err);
         setErrorMessange("Please enter another location");
         setData({});
-        setWeather();
-        setTemp();
+        // setWeather();
+        // setTemp();
       })
       setLocation('')
     }
@@ -71,14 +94,16 @@ export default function WeatherLocation() {
             {data.name}
           </div>
           
-          <img className={styles.locationicon} src={`icons/${data.weather[0].icon}.png`}/>
+          <div className={styles.locationicon}>
+            {weatherData && <Image src={icon} alt="weather icon" width={100} height={100} />}
+          </div>
 
           <div className={styles.locationtemp}>
-              {temp} °C
+            {weatherData && weatherData.temp} °C
           </div>
 
             <div className={styles.locationweather}>
-              {weather && weather.toUpperCase()}
+              {weatherData && weatherData.weather.toUpperCase()}
             </div>
         </div>
 
