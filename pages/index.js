@@ -68,7 +68,6 @@ export default function Home({
             itemImage={styles.itemImage}
             itemText={styles.itemText}
             keyword="Women Top and Bottom"
-
           />
 
           <BottomCard 

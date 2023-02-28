@@ -4,10 +4,7 @@ import styles from '@/styles/Home.module.css'
 
 import Logo from '@/components/logo'
 
-export default function Image({
-    
-
-}){ 
+export default function Image(){ 
 
 return (
         <>

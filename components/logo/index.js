@@ -33,7 +33,7 @@ export default function Logo({
           </div>
           <div className={styles.menuitems}>
             <li><a onClick={()=>{r.push("/")}}>Home</a></li>
-            <li><a onClick={()=>{r.push("/product")}}>Product</a></li>
+            <li><a onClick={()=>{r.push("/products")}}>Product</a></li>
             <li><a onClick={()=>{r.push("/recommend")}}>Recommend</a></li>
           </div>
         </div>

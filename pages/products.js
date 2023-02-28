@@ -12,7 +12,7 @@ export default function Product(){
                 productItem1={styles.productItem1}
                 productItemImage={styles.productItemImage}
                 productItemText={styles.productItemText}
-
+                keyword = "Women Top and Bottom"
             />
         </>
     )
