@@ -67,7 +67,6 @@ export default function WeatherLocation() {
           setWeatherKeyword("umbrella");
           setIcon("/icons/thunderstorm.png");
       }
-       console.log(weatherKeyword + "heeereee!!!!!!!!!") 
       }).catch(err => {
         console.log(err);
         setErrorMessange("Please enter another location");
