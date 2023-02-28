@@ -9,8 +9,6 @@ import CategoryCard from '@/components/categoryCard'
 import BottomCard from '@/components/postCard'
 import ListItem from '@/components/listItem'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home({
   cat1="Top",
   cat2="Bottoms",
@@ -34,9 +32,7 @@ export default function Home({
       </Head>
       <main className={styles.main}>
         <div>
-          <Logo 
-            onClickMenu={()=>{console.log("menuClickedddd")}}
-          /> 
+          <Logo /> 
         </div>
 
 
@@ -60,6 +56,7 @@ export default function Home({
             item1={styles.item1}
             itemImage={styles.itemImage}
             itemText={styles.itemText}
+            keyword="Women Top and Bottom"
 
           />
 

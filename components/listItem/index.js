@@ -11,7 +11,7 @@ export default function ListItem(props){
         method: 'GET',
         url: 'https://unofficial-shein.p.rapidapi.com/products/search',
         params: {
-          keywords: 'Women Top and Bottom',
+          keywords: props.keyword,
           language: 'en',
           country: 'US',
           currency: 'USD',
@@ -37,7 +37,6 @@ export default function ListItem(props){
                 // setProduct([]);
             });
           }
-
           loadData();
       }, []);
 

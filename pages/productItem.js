@@ -11,9 +11,7 @@ export default function Image({
 
 return (
         <>
-            <Logo 
-            onClickMenu={()=>{console.log("menuClickedddd")}}
-            /> 
+            <Logo /> 
             <main className={styles.productMain}>
                 <Product/>
                 <SizeChart/>
