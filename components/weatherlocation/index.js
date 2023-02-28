@@ -2,11 +2,9 @@ import styles from '@/styles/Home.module.css'
 
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
-
-const inter = Inter({ subsets: ['latin'] })
+import ListItem from '../listItem'
 
 export default function WeatherLocation() {
   const [location, setLocation] = useState('');
@@ -18,7 +16,8 @@ export default function WeatherLocation() {
   // const [temp, setTemp] = useState();
   const [display, setDisplay] = useState(false);
   // const [image, setImage] = useState("");
-
+  const [weatherKeyword, setWeatherKeyword] = useState('Women Top and Bottom');
+  
   var apiKey = "8ca7e2dc56cc6762826d7af08501be29";
   var lang = "en";
   var units = "metric";
@@ -43,21 +42,32 @@ export default function WeatherLocation() {
         setErrorMessange("")
 
       if (response.data.weather[0].main == "Clouds") {
+        // useEffect(() => {
+        //   setWeatherKeyword("long sleeve");
+        // },[])  
+        
+          setWeatherKeyword("long sleeve");
           setIcon("/icons/broken-clouds.png");
       } else if (response.data.weather[0].main == "Clear") {
+          setWeatherKeyword("sunny");
           setIcon("/icons/clear-sky.png");
       } else if (response.data.weather[0].main == "Atmosphere") {
+          setWeatherKeyword("long sleeve");
           setIcon("/icons/mist.png");
       } else if (response.data.weather[0].main == "Rain") {
+          setWeatherKeyword("Rain coat");
           setIcon("/icons/rain.png");
       } else if (response.data.weather[0].main == "Drizzle") {
+          setWeatherKeyword("Rain coat");
           setIcon("/icons/shower-rain.png");
       } else if (response.data.weather[0].main == "Snow") {
+          setWeatherKeyword("Winter jacket");
           setIcon("/icons/snow.png");
       } else if (response.data.weather[0].main == "Thunderstorm") {
+          setWeatherKeyword("umbrella");
           setIcon("/icons/thunderstorm.png");
       }
-        
+       console.log(weatherKeyword + "heeereee!!!!!!!!!") 
       }).catch(err => {
         console.log(err);
         setErrorMessange("Please enter another location");
@@ -85,30 +95,29 @@ export default function WeatherLocation() {
           />
         </div>
 
-    {display ? 
-           <>
+        { display ? 
+              <>
+                <div className={styles.locationcont}>
+                    <div className={styles.location}>
+                      {data.name}
+                    </div>
+                    
+                    <div className={styles.locationicon}>
+                      {weatherData && <Image src={icon} alt="weather icon" width={100} height={100} />}
+                    </div>
 
-      <div className={styles.locationcont}>
-          
-          <div className={styles.location}>
-            {data.name}
-          </div>
-          
-          <div className={styles.locationicon}>
-            {weatherData && <Image src={icon} alt="weather icon" width={100} height={100} />}
-          </div>
+                    <div className={styles.locationtemp}>
+                      {weatherData && weatherData.temp} °C
+                    </div>
 
-          <div className={styles.locationtemp}>
-            {weatherData && weatherData.temp} °C
-          </div>
+                      <div className={styles.locationweather}>
+                        {weatherData && weatherData.weather.toUpperCase()}
+                      </div>
+                  </div>
 
-            <div className={styles.locationweather}>
-              {weatherData && weatherData.weather.toUpperCase()}
-            </div>
-        </div>
-
-        </> : null
-    }
+                  {<ListItem keyword={weatherKeyword} />}
+              </> : null
+         }
 
     </>
   )
