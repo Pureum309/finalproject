@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 
 export default function ListItem(props){
     const [product, setProduct] = useState(null);
+    const [keyword, setKeyword] = useState("");
     const r = useRouter();
 
     const options = {
@@ -25,18 +26,37 @@ export default function ListItem(props){
         }
       };
 
+      const loadData = async () => {
+          console.log("loadData()");
+        await axios.request(options)
+        .then((response) => {
+            // console.clear();
+            console.log(response.data);
+            setProduct(response.data.info.products);
+            setKeyword(props.keyword);
+        }).catch(function (error) {
+            console.error(error);
+            // setProduct([]);
+        });
+      }
+
+      if (keyword != "" && keyword != props.keyword)
+      {
+          loadData();
+      }
+
       useEffect(() => {
-          const loadData = async () => {
-            await axios.request(options)
-            .then((response) => {
-                // console.clear();
-                console.log(response.data);
-                setProduct(response.data.info.products);
-            }).catch(function (error) {
-                console.error(error);
-                // setProduct([]);
-            });
-          }
+        //   const loadData = async () => {
+        //     await axios.request(options)
+        //     .then((response) => {
+        //         // console.clear();
+        //         console.log(response.data);
+        //         setProduct(response.data.info.products);
+        //     }).catch(function (error) {
+        //         console.error(error);
+        //         // setProduct([]);
+        //     });
+        //   }
           loadData();
       }, []);
 
