@@ -448,6 +448,7 @@ Main CSS come below
   justify-content: center;
   margin: auto; 
 }
+/* Navbar */
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
@@ -567,8 +568,6 @@ right: 0;
   font-size: 1.5rem;
   font-weight: 500;
 }
-
-
 
 .navcontainer input[type="checkbox"]:checked ~ .menuitems {
   transform: translateX(0);
