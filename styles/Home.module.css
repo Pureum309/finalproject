@@ -236,10 +236,13 @@ Main CSS come below
 .bottomCont {
   width: "80%";
   height: 20em;
-  background-color: grey;
   display: flex;
   align-items: center;
   justify-content: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .bottomInnerCont {
