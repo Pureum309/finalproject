@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import ListItem from '../listItem'
 
@@ -42,10 +42,14 @@ export default function WeatherLocation() {
         setErrorMessange("")
 
       if (response.data.weather[0].main == "Clouds") {
+        // useEffect(() => {
+        //   setWeatherKeyword("long sleeve");
+        // },[])  
+        
           setWeatherKeyword("long sleeve");
           setIcon("/icons/broken-clouds.png");
       } else if (response.data.weather[0].main == "Clear") {
-          setWeatherKeyword("long sleeve");
+          setWeatherKeyword("sunny");
           setIcon("/icons/clear-sky.png");
       } else if (response.data.weather[0].main == "Atmosphere") {
           setWeatherKeyword("long sleeve");
@@ -111,7 +115,7 @@ export default function WeatherLocation() {
                       </div>
                   </div>
 
-                  <ListItem keyword={weatherKeyword} />
+                  {<ListItem keyword={weatherKeyword} />}
               </> : null
          }
 
