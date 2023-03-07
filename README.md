@@ -23,5 +23,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## References
 1. APIs : [OpenWeather](https://api.openweathermap.org)
-2. APIs : [Unofficial Shein RapidAPI] (https://rapidapi.com/apidojo/api/unofficial-shein)
+2. APIs : [Unofficial Shein RapidAPI](https://rapidapi.com/apidojo/api/unofficial-shein)
 3. Size Chart Reference : 
