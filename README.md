@@ -22,6 +22,6 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## References
-1. APIs : OpenWeather (https://api.openweathermap.org).
+1. APIs : (OpenWeather)[https://api.openweathermap.org]
 2. APIs : Unofficial Shein (https://rapidapi.com/apidojo/api/unofficial-shein)
 3. Size Chart Reference : 
