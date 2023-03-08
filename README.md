@@ -1,5 +1,5 @@
 ## App Description
-Moody is a marketplace app focused on the fashion industry. It shows women's clothes, and it recommends based on searched location.
+Moody is a marketplace website that caters to the fashion industry, focusing on women's clothing. Our website incorporates a unique feature that recommends clothing items based on the current weather conditions of the user's searched location. For instance, if the weather is sunny in Los Angeles, our platform will suggest a range of stylish sunglasses, while in the event of rain, Moody will recommend a suitable raincoat.
 
 ## Getting Started
 First, you need to install the package
