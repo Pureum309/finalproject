@@ -1,0 +1,67 @@
+.super-container {
+  position: relative;
+}
+
+.slide-container {
+  position: fixed;
+  top: 0;
+  right: 50px;
+  height: 100vh;
+  transition: all 0.3s ease-out;
+  z-index: 1000;
+}
+.active {
+  right: 0; /* move into view when menu is open */
+}
+
+.stripe {
+  height: 50px;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.hamburger-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+}
+
+.top {
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+.nav-wrap {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.li {
+  margin: 10px 0;
+}
+
+.li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
