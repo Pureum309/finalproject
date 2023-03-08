@@ -25,7 +25,7 @@ export default function Recommend({
                 onClickMenu={()=>{console.log("menuClickedddd")}}
               /> 
           </div>
-
+          <div>Search your place! We will recommend for you!</div>
           <div className={styles.weathercard_square}>
             <WeatherLocation />
           </div>
