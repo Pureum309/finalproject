@@ -6,7 +6,7 @@
   padding: 6rem; */
   min-height: 100vh;
   background-color: white;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
 }
 
 .productMain{
@@ -276,7 +276,7 @@ Main CSS come below
   margin-top:0.5em;
   margin-bottom:1em;
   padding-left: 1em;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
 }
 
 .errormessage {
@@ -317,7 +317,7 @@ Main CSS come below
 
 .productmain {
   background-color: white;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
   padding-top: 5%;
   display: flex;
   flex-direction: column;
@@ -405,7 +405,7 @@ Main CSS come below
   color:rgb(248, 248, 248);
   margin-top:1em;
   margin-bottom:1em;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
   text-align: center;
   align-items: center;
   display:flex;
@@ -441,7 +441,7 @@ Main CSS come below
   color:rgb(76, 77, 77);
   margin-top:1em;
   margin-bottom:1em;
-  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Comfortaa', cursive; */
   text-align: center;
   align-items: center;
   display:flex;
@@ -583,6 +583,13 @@ right: 0;
 
 .navcontainer input[type="checkbox"]:checked ~ .hamburgerlines .line3 {
   transform: rotate(-45deg);
+}
+
+/* Rec CSS */
+.recText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
