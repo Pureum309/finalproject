@@ -33,3 +33,32 @@ test.describe('Header area', () => {
         await expect(linkTag).toHaveAttribute('href', '/moodyicon.svg')
     })
 })
+
+test.describe('Weather', () => {
+    test('Main', async({ page }) => {
+        await page.goto(HomePage)
+
+        await expect(page.locator('#recommendText')).toContainText('This how we recommend for you today!');
+    })
+})
+
+test.describe('Logo', () => {
+    test('Number of li under Menu', async({ page }) => {
+        await page.goto(HomePage)
+
+        await expect(page.locator('#hamburgerlines > span')).toHaveCount(3);
+    })
+
+    test('Should contain list for menu', async ({ page }) => {
+        await page.goto(HomePage);
+        await expect(page.locator('#menuitems > li')).toContainText(["Home", "Product","Recommend"]);
+    })
+})
+
+test.describe('Linking to another page', () => {
+    test('Should contain a link to Recomend Page', async ({page}) => {
+        await page.goto(HomePage);
+        await page.click('text=Recommend Page');
+        await expect(page).toHaveURL(RecommendPage);
+    })
+})
