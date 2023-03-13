@@ -106,7 +106,7 @@ export default function WeatherLocation() {
                     </div>
 
                     <div className={styles.locationtemp}>
-                      {weatherData && weatherData.temp} °C
+                      {weatherData && weatherData.temp.toFixed(1)} °C
                     </div>
 
                       <div className={styles.locationweather}>
