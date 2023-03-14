@@ -11,7 +11,7 @@ export default function SizeChart() {
     };
 
     return (
-        <div className={styles.sizechart}>
+        <div className={styles.sizechart} id="sizechart">
 
             <button className={styles.sizeChartBtn} onClick={toggleVisibility}>
                 View Size Chart

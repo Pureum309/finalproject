@@ -53,6 +53,11 @@ test.describe('Logo', () => {
         await page.goto(HomePage);
         await expect(page.locator('#menuitems > li')).toContainText(["Home", "Product","Recommend"]);
     })
+
+    test('Should contain a for li', async ({ page }) => {
+        await page.goto(HomePage);
+        await expect(page.locator('li > a')).toHaveCount(3);
+    })
 })
 
 test.describe('Linking to another page', () => {
