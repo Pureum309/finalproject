@@ -1,74 +1,101 @@
 [
- {
-  "UKSize": 4,
-  "BustIn": 31,
-  "BustCm": 78,
-  "WaistIn": 24,
-  "WaistCm": 60,
-  "HipsIn": 33,
-  "HipsCm": 83.5
- },
- {
-  "UKSize": 6,
-  "BustIn": 32,
-  "BustCm": 80.5,
-  "WaistIn": 26,
-  "WaistCm": 62.5,
-  "HipsIn": 34,
-  "HipsCm": 86
- },
- {
-  "UKSize": 8,
-  "BustIn": 33,
-  "BustCm": 83,
-  "WaistIn": 26,
-  "WaistCm": 65,
-  "HipsIn": 35,
-  "HipsCm": 88.5
- },
- {
-  "UKSize": 10,
-  "BustIn": 35,
-  "BustCm": 88,
-  "WaistIn": 28,
-  "WaistCm": 70,
-  "HipsIn": 37,
-  "HipsCm": 93.5
- },
- {
-  "UKSize": 12,
-  "BustIn": 37,
-  "BustCm": 93,
-  "WaistIn": 30,
-  "WaistCm": 75,
-  "HipsIn": 39,
-  "HipsCm": 98.5
- },
- {
-  "UKSize": 14,
-  "BustIn": 39,
-  "BustCm": 98,
-  "WaistIn": 31,
-  "WaistCm": 80,
-  "HipsIn": 41,
-  "HipsCm": 103.5
- },
- {
-  "UKSize": 16,
-  "BustIn": 41,
-  "BustCm": 103,
-  "WaistIn": 33,
-  "WaistCm": 85,
-  "HipsIn": 43,
-  "HipsCm": 108.5
- },
- {
-  "UKSize": 18,
-  "BustIn": 44,
-  "BustCm": 110.5,
-  "WaistIn": 36,
-  "WaistCm": 92.5,
-  "HipsIn": 46,
-  "HipsCm": 116
- }
+    {
+        "USSize": 0,
+        "UKSize": 4,
+        "EU": 30,
+        "WaistIn": 21.5,
+        "WaistCm": 54.5,
+        "HipsIn": 31.5,
+        "HipsCm": 80
+    },
+    {
+        "USSize": 2,
+        "UKSize": 6,
+        "EU": 32,
+        "WaistIn": 23,
+        "WaistCm": 58.5,
+        "HipsIn": 33,
+        "HipsCm": 84
+    },
+    {
+        "USSize": 4,
+        "UKSize": 8,
+        "EU": 34,
+        "WaistIn": 25,
+        "WaistCm": 63.5,
+        "HipsIn": 35,
+        "HipsCm": 89
+    },
+    {
+        "USSize": 6,
+        "UKSize": 10,
+        "EU": 36,
+        "WaistIn": 27,
+        "WaistCm": 68.5,
+        "HipsIn": 37,
+        "HipsCm": 94
+    },
+    {
+        "USSize": 8,
+        "UKSize": 12,
+        "EU": 38,
+        "WaistIn": 29,
+        "WaistCm": 73.5,
+        "HipsIn": 39,
+        "HipsCm": 99
+    },
+    {
+        "USSize": 10,
+        "UKSize": 14,
+        "EU": 40,
+        "WaistIn": 31,
+        "WaistCm": 78.5,
+        "HipsIn": 41,
+        "HipsCm": 104
+    },
+    {
+        "USSize": 12,
+        "UKSize": 16,
+        "EU": 42,
+        "WaistIn": 33,
+        "WaistCm": 84,
+        "HipsIn": 43,
+        "HipsCm": 109
+    },
+    {
+        "USSize": 14,
+        "UKSize": 18,
+        "EU": 44,
+        "WaistIn": 35,
+        "WaistCm": 89,
+        "HipsIn": 45,
+        "HipsCm": 114.5
+    },
+    {
+        "USSize": 16,
+        "UKSize": 20,
+        "EU": 46,
+        "WaistIn": 38,
+        "WaistCm": 96.5,
+        "HipsIn": 47,
+        "HipsCm": 119.5
+    },
+    {
+        "USSize": 18,
+        "UKSize": 22,
+        "EU": 48,
+        "WaistIn": 41,
+        "WaistCm": 104,
+        "HipsIn": 49,
+        "HipsCm": 124.5
+    },
+    {
+        "USSize": 20,
+        "UKSize": 24,
+        "EU": 50,
+        "WaistIn": 43,
+        "WaistCm": 109,
+        "HipsIn": 51,
+        "HipsCm": 129.5
+    }
 ]
