@@ -24,4 +24,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## References
 1. APIs : [OpenWeather](https://api.openweathermap.org)
 2. APIs : [Unofficial Shein RapidAPI](https://rapidapi.com/apidojo/api/unofficial-shein)
-3. Size Chart Reference : 
+3. Size Chart Reference : [Lululemon](https://www.lululemon.com.hk/en-hk/p/cinchable-cuff-high-rise-jogger-asia-fit/LW5FKJA.html?dwvar_LW5FKJA_color=0001)

@@ -86,7 +86,7 @@ export default function Weather() {
                 It's {weatherData && weatherData.weather} today
             </div>
 
-            <div className={styles.recommendText}>
+            <div className={styles.recommendText} id="recommendText">
                 This how we recommend for you today!
             </div>
         </div>

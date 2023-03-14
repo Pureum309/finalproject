@@ -16,7 +16,7 @@ export default function Logo() {
                 <div className={styles.navbar}>
                   <div className={styles.navcontainer}>
                       <input className={styles.checkbox} type="checkbox" name="" id="" />
-                      <div className={styles.hamburgerlines}>
+                      <div className={styles.hamburgerlines} id="hamburgerlines">
                         <span className={styles.line1}></span>
                         <span className={styles.line2}></span>
                         <span className={styles.line3}></span>
@@ -29,7 +29,7 @@ export default function Logo() {
                   />
                   </div>
                   {  handleToggle &&   
-                    <div className={styles.menuitems}>
+                    <div className={styles.menuitems} id="menuitems">
                       <li><a onClick={()=>{r.push("/")}}>Home</a></li>
                       <li><a onClick={()=>{r.push("/products")}}>Product</a></li>
                       <li><a onClick={()=>{r.push("/recommend")}}>Recommend</a></li>
