@@ -21,7 +21,7 @@ export default function ListItem(props){
           page: '1'
         },
         headers: {
-          'X-RapidAPI-Key': '08f7b71a5dmsh33c5dbaf83cb8b8p190223jsn8265577bbee3',
+          'X-RapidAPI-Key': '8db434156fmsh8abfd27620c9887p121d34jsn2447b940325c',
           'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
         }
       };
