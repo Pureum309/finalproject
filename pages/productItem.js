@@ -8,11 +8,14 @@ export default function Image(){
 
 return (
         <>
-            <Logo /> 
-            <main className={styles.productMain}>
+            <div>
+                <Logo />
+            </div> 
+            
+            <div className={styles.productMain2}>
                 <Product/>
                 <SizeChart/>
-            </main>
+            </div>
         </>
     )
 }
