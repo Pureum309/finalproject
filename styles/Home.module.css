@@ -338,6 +338,8 @@ Main CSS come below
 .amount {
   position: relative;
   font-size: 30px;
+  margin-top: 140px;
+  margin-left: -156px;
 }
 
 .product div {
@@ -350,7 +352,7 @@ Main CSS come below
 }
 
 .product button {
-  margin-left: -35px;
+  margin-left: 115px;
   margin-top: 356px;
   background-color: #ef8a8a;
   border-radius: 16px;
