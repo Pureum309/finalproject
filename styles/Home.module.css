@@ -336,7 +336,8 @@ Main CSS come below
 }
 
 .amount {
-  grid-row: 3 / 4;
+  position: relative;
+  font-size: 30px;
 }
 
 .product div {
