@@ -350,13 +350,14 @@ Main CSS come below
 }
 
 .product button {
-  margin-left: 20px;
-  margin-top: 200px;
+  margin-left: -35px;
+  margin-top: 356px;
   background-color: #ef8a8a;
   border-radius: 16px;
   display: inline-block;
   top: 473px;
   width: 176px;
+  height: 50px;
   box-sizing: border-box;
   border: transparent;
   font-size: 14px;
