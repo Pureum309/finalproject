@@ -41,19 +41,39 @@ text-decoration: underline;
 
 /* Product Item CSS */
 .mainitem{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 250px));
-  justify-content: center;
-}
-.mainitem:hover{
-  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 12em;
 }
 .items{
-  display: grid;
+  display: flex;
   justify-content: center;
-  color: black;
-  text-align: center;
-  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--white);
+  max-width: 760px;
+  padding: 2rem;
+  margin: 0.1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  width: 30%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.item1 {
+  width: 200px;
+  height: auto;
+  justify-content: center;
+  display: flex;
+  background-color: #F9F6E4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 30px;
+}
+.itemImage {
+  width: 200px;
+  height: 200px;
 }
 .itemText{
   display: flex;
@@ -61,28 +81,11 @@ text-decoration: underline;
   text-align: center;
   width: 200px;
 }
-.item1 {
-  width: 200px;
-  height: 200px;
-  justify-content: center;
-  display: flex;
-  background-color: #F9F6E4;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-  border-radius: 30px;
-}
-.item1:hover {
-  transform: scale(1.2);
-  transition: transform 0.5s ease;
-}
- 
-.item1 div {
-  width: 150px;
-  height: 150px;
-  margin-top: 25px;
-  background-color: white;
-}
-.items a{
-  margin: 5px;
+.items:hover {
+  background-color:  #F9F6E4;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out;
 }
 
 
@@ -166,8 +169,8 @@ Main CSS come below
 /* Button to recommend page */
 .recommend{
   display: block;
-  width: 200px;
-  height: 40px;
+  width: 250px;
+  height: 40%;
   line-height: 40px;
   font-size: 18px;
   text-decoration: none;
@@ -216,17 +219,66 @@ Main CSS come below
 }
 
 /* Recommend page */
-.weathercard_square {
-    background-color:  #F9F6E4;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 3em;
-    align-items: center;
-    width:30%;
-    border-radius: 20px;
-  }
+.weathercard_squares {
+  background-color:  #F9F6E4;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 3em;
+  align-items: center;
+  width:30%;
+  border-radius: 20px;
+}
 
+/* Rec TEXT CSS */
+.recText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Recommend Product Item CSS */
+.recMainItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 12em;
+}
+.recItems:hover {
+  background-color:  #F9F6E4;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out;
+}
+.recItems {
+  background-color: var(--white);
+  max-width: 760px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  width: 30%;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.recItem1 {
+  width: 100%;
+}
+.recItemImage {
+  width: 100%;
+  height: auto;
+}
+.recItemText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:flex-end;
+}
+.rec_goods_name {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
 
 /* WeatherLocation    */
 .input input {
@@ -241,7 +293,7 @@ Main CSS come below
   color:rgb(76, 77, 77);
   margin-top:0.5em;
   margin-bottom:1em;
-  padding-left: 1em;
+  padding: 0 3em;
   /* font-family: 'Comfortaa', cursive; */
 }
 
@@ -256,18 +308,15 @@ Main CSS come below
 }
 
 .locationcont {
+  background-color:  #F9F6E4;
   display: flex;
   flex-direction: column;
+  margin: 1em auto;
+  padding: 1em;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 2em;
-  font-size: 2em;
-  margin: auto;
-}
-
-.locationcont img {
-  width:100%;
-  /* margin-left: 1em; */
+  width:30%;
+  border-radius: 20px;
+  font-size: 1.5em;
 }
 
 .locationtemp {
@@ -279,8 +328,6 @@ Main CSS come below
 }
 
 /* Weather Card Page */
-
-
 .productmain {
   background-color: white;
   padding-top: 5%;
@@ -340,12 +387,6 @@ Main CSS come below
 }
 
 .productCont button {
-  /* margin-left: 20px;
-  margin-top: 200px;
-  display: inline-block;
-  top: 473px;
-  box-sizing: border-box; */
-  
   width: 100%;
   height: 3em;
   background-color: #ef8a8a;
@@ -448,7 +489,7 @@ Main CSS come below
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
   width: 100%;
   margin: auto;
 }
@@ -576,15 +617,56 @@ Main CSS come below
   transform: rotate(-45deg);
 }
 
-/* Rec CSS */
-.recText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.itemImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
+.sizeChartBtn {
+  width: 20%; /* adjust for responsiveness */
+  margin-left: 0;
+}
 
-@media (max-width: 501px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Navbar CSS */
+  .navcontainer {
+    background-color: #ffffff;
+  }
+  /* Recommend Product Item CSS */
+  .recMainItem {
+    padding: 0 5em;
+  }
+  .recItems {
+    width: 48%;
+  }
+  .logoMain {
+    padding-bottom: 6em;
+  }
+  /* Main Weather Card */
+  .weathercard {
+    margin-top: 3em;
+    width: 50%;
+  }
+  /* Category Card Branch */
+  .categorycard {
+    margin: 3em 0;
+    padding: 1.5em;
+  }
+  /* Product Item CSS */
+  .mainitem{
+    padding: 0 5em;
+  }
+  .items{
+    width: 48%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+  /* Navbar CSS */
+  .navcontainer {
+    background-color: #ffffff;
+  }
   .bottomCont {
     width: "50%";
     height: 20em;
@@ -605,11 +687,6 @@ Main CSS come below
     justify-content: center;
     align-items: center;
   }
-
-  .weathercard_square {
-    width:80%;
-  }
-
   .input input {
     font-size: 1em;
   }
@@ -649,17 +726,57 @@ Main CSS come below
     width: 100px;
     font-size: 10px;
   }
-  
-  
+  /* Rec TEXT CSS */
+  .recText {
+    padding: 1em;
+  }
+  /* Recommend page */
+  .weathercard_squares {
+    margin: auto;
+    padding: 2em;
+    width:90%;
+  }
+  .locationcont {
+    width:90%;
+  }
+  .locationcont img {
+    width:80%;
+  }
+  .locationtemp {
+    font-size: 1em;
+  } 
+  .locationweather {
+    font-size: 0.7em;
+  }
+  /* Recommend Product Item CSS */
+  .recMainItem {
+    padding: 0 2em;
+  }
+  .recItems {
+    width: 100%;
+  }
+  /* Main Weather Card */
+  .weathercard {
+    margin-top: 3em;
+    width: 90%;
+  }
+  /* Category Card Branch */
+  .categorycard {
+    margin: 2em 0;
+    padding: 1em;
+  }
+  /*Description*/
+  .des {
+    text-align: center;
+    font-style: italic;
+    padding: 0 1em;
+  }
+  /* Product Item CSS */
+  .mainitem{
+    padding: 0 1em;
+  }
+  .items{
+    width: 100%;
+  }
 }
 
-.itemImage {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
-
-.sizeChartBtn {
-  width: 20%; /* adjust for responsiveness */
-  margin-left: 0;
-}

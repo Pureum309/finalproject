@@ -9,12 +9,14 @@ export default function Product(){
                 <Logo /> 
             </div>
             <div  productMainCont={styles.productMainCont }>
-                <ListItem limit={20} 
+                <ListItem limit={15} 
                     productMainItem={styles.productMainItem }
                     productItems={styles.productItems}
                     productItem1={styles.productItem1}
                     productItemImage={styles.productItemImage}
                     productItemText={styles.productItemText}
+                    product_goods_name={styles.product_goods_name}
+                    product_goods_price={styles.product_goods_price}
                     keyword = "Women Top and Bottom"
                 />
             </div>

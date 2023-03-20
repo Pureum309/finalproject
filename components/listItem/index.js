@@ -74,17 +74,17 @@ export default function ListItem(props){
       }
         return (
             <>
-            <div className={props.mainitem || props.productMainItem}>
+            <div className={props.mainitem || props.productMainItem || props.recMainItem}>
                 {product != null && product.length > 0 && product.slice(0,props.limit).map((item, index) => (
-                    <div className={props.items || props.productItems} key={index} onClick={() => handleClick(item)}>
-                        <div className = {props.item1 || props.productItem1}>
+                    <div className={props.items || props.productItems || props.recItems} key={index} onClick={() => handleClick(item)}>
+                        <div className = {props.item1 || props.productItem1 || props.recItem1}>
                             <div>
-                                <img className = {props.itemImage || props.productItemImage } src= {item.goods_img}/>
+                                <img className = {props.itemImage || props.productItemImage || props.recItemImage } src= {item.goods_img}/>
                             </div>
                         </div> 
-                        <div className={props.itemText || props.productItemText}>
-                            <a>{item.goods_name}</a> 
-                            <a>{item.salePrice.amountWithSymbol}</a>
+                        <div className={props.itemText || props.productItemText || props.recItemText }>
+                            <a className={props.product_goods_name || props.rec_goods_name}>{item.goods_name}</a> 
+                            <a className={props.product_goods_price || props.rec_goods_price}>{item.salePrice.amountWithSymbol}</a>
                         </div>
                     </div>
                 ))}

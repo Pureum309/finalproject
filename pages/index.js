@@ -51,9 +51,9 @@ export default function Home({
         </div>
           
 
-         <div className={styles.btn}>
-         <a className={styles.recommend} href="/recommend" >Recommend Page</a>
-          </div>
+        <div className={styles.btn}>
+          <a className={styles.recommend} href="/recommend" >Recommend Page</a>
+        </div>
 
 
           <div className={styles.heading}>
@@ -61,7 +61,7 @@ export default function Home({
             <a className={styles.seeAll} href="/products" >See All</a>
           </div>
           <ListItem 
-            limit={10}
+            limit={15}
             mainitem={styles.mainitem }
             items={styles.items}
             item1={styles.item1}

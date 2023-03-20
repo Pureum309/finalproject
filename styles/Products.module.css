@@ -1,41 +1,72 @@
 .logoMain {
   padding-bottom: 6em;
 }
-.productMainItem{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 500px));
-    justify-content: center;
-    /* align-items: center; */
+.productMainItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 12em;
+}
+.productItems:hover {
+  background-color:  #F9F6E4;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out;
+}
+.productItems {
+  background-color: var(--white);
+  max-width: 760px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+
+  width: 30%;
+  margin-bottom: 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.productItem1 {
+  width: 100%;
+}
+.productItemImage {
+  width: 100%;
+  height: auto;
+}
+.productItemText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:flex-end;
+}
+.product_goods_name {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 1.5rem 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .productMainItem {
+    padding: 0 5em;
   }
-  .productItems{
-    display: grid;
-    justify-content: center;
-    color: black;
-    text-align: center;
-    margin-bottom: 10px;
+  .productItems {
+    width: 48%;
   }
-  .productItem1:hover {
-    cursor: pointer;
-    transform: scale(0.9);
-    transition: transform 0.5s ease-in-out;
+  .logoMain {
+    padding-bottom: 6em;
   }
-  .productItemText{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 80%;
+}
+
+@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+  .logoMain {
+    padding-bottom: 6em;
   }
-  .productItems a{
-    margin: 5px;
+  .productMainItem {
+    padding: 0 1em;
   }
-  .productItem1 {
-    width: 80%;
-    border: 10px solid #F9F6E4;
-    justify-content: center;
-    display: flex;
-  }
-  .productItemImage {
+  .productItems {
     width: 100%;
-    height: 100%;
-    background-size: cover;
+    margin: 1rem;
   }
+}
+
+
+

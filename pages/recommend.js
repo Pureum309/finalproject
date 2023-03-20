@@ -24,9 +24,7 @@ export default function Recommend({
             <Logo /> 
           </div>
           <h2 className={styles.recText}>Search Location, We'll find your match!</h2>
-          <div className={styles.weathercard_square}>
-            <WeatherLocation />
-          </div>
+          <WeatherLocation />
         </main>
       </>
     )

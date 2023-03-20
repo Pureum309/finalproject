@@ -79,19 +79,20 @@ export default function WeatherLocation() {
   }
   return (
     <>
-    
-        <div className={styles.input}>
-          <div className={styles.errormessage}>
-            {ErrorMessange}
+        <div className={styles.weathercard_squares}>
+          <div className={styles.input}>
+            <div className={styles.errormessage}>
+              {ErrorMessange}
+            </div>
+            <input 
+              value={location}
+              onChange={event => setLocation(event.target.value)}
+              placeholder="Check Your Weather"
+              onKeyDown={searchLocation}
+              type="text"
+              img src="./search.svg"
+            />
           </div>
-          <input 
-            value={location}
-            onChange={event => setLocation(event.target.value)}
-            placeholder="Check Your Weather"
-            onKeyDown={searchLocation}
-            type="text"
-            img src="./search.svg"
-          />
         </div>
 
         { display ? 
@@ -113,8 +114,17 @@ export default function WeatherLocation() {
                         {weatherData && weatherData.weather.toUpperCase()}
                       </div>
                   </div>
-
-                  {<ListItem keyword={weatherKeyword} />}
+                  <ListItem 
+                    keyword={weatherKeyword}
+                    limit={15}
+                    recMainItem={styles.recMainItem }
+                    recItems={styles.recItems}
+                    recItem1={styles.recItem1}
+                    recItemImage={styles.recItemImage}
+                    recItemText={styles.recItemText}
+                    rec_goods_name={styles.rec_goods_name}
+                    rec_goods_price={styles.rec_goods_price}
+                  />
               </> : null
          }
 
