@@ -628,7 +628,7 @@ Main CSS come below
   margin-left: 0;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Navbar CSS */
   .navcontainer {
     background-color: #ffffff;
@@ -662,7 +662,7 @@ Main CSS come below
   }
 }
 
-@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   /* Navbar CSS */
   .navcontainer {
     background-color: #ffffff;
