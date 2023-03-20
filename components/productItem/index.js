@@ -6,19 +6,18 @@ export default function Product(){
     const { title, imgs, price } = r.query;
 
     return (
-        <div className={styles.product}>
+        <div className={styles.productCont}>
 
             <div className={styles.productItem}>
                 <img src={imgs} alt={title} />
             </div>
 
-            <h2>{title}</h2>
-
-            {/* <div className={styles.description}>Description</div> */}
-
-            <div className={styles.productInfo}>
-                <div className={styles.amount}>{price}</div>
-                <button className={styles.addcartbtn}>Add to Cart</button>
+            <div className={styles.productInnerCont}>
+                <h2>{title}</h2>
+                <div className={styles.productInfo}>
+                    <div className={styles.amount}>{price}</div>
+                    <button className={styles.addcartbtn}>Add to Cart</button>
+                </div>
             </div>
 
         </div>

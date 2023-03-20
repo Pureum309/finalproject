@@ -8,9 +8,9 @@ export default function Image(){
 
 return (
         <>
-            <div>
-                <Logo />
-            </div> 
+            <div className={styles.logoMain}>
+                <Logo /> 
+            </div>
             
             <div className={styles.productMain2}>
                 <Product/>

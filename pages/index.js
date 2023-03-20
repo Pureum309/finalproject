@@ -31,7 +31,7 @@ export default function Home({
         <link rel="icon" href="/moodyicon.svg" />
       </Head>
       <main className={styles.main}>
-        <div>
+        <div className={styles.logoMain}>
           <Logo /> 
         </div>
 

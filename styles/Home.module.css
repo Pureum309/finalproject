@@ -4,13 +4,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: white;
   /* font-family: 'Comfortaa', cursive; */
 }
 
 .productMain{
-  min-height: 130vh;
+  /* min-height: 130vh; */
   background-color: white;
   position: absolute;
 	left: 3.5em;
@@ -312,52 +312,44 @@ Main CSS come below
 }
 
 /* Product Style CSS */
-.productItem {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  grid-row: 1 / 6;
-  grid-column: 1 / 2;
-}
-
-.product {
+.productCont {
   background-color: var(--white);
   max-width: 760px;
   padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  display: grid;
-  margin: auto;
-  grid-template: auto auto auto 100px auto / 400px 2rem auto;
+
+  display: flex;
 }
 
-.description {
-  margin-top: 20px;
+.productInnerCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  padding: 10% 0;
+}
+
+.productItem {
+  height: 100%;
+  width: 100%;
 }
 
 .amount {
-  position: relative;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-.product div {
-  display: flex;
-  left: 140px;
-}
-
-.product h2 {
-  margin-left: 30%;
-}
-
-.product button {
-  margin-left: 20px;
+.productCont button {
+  /* margin-left: 20px;
   margin-top: 200px;
-  background-color: #ef8a8a;
-  border-radius: 16px;
   display: inline-block;
   top: 473px;
-  width: 176px;
-  box-sizing: border-box;
+  box-sizing: border-box; */
+  
+  width: 100%;
+  height: 3em;
+  background-color: #ef8a8a;
+  border-radius: 16px;
   border: transparent;
   font-size: 14px;
   font-weight: 500;
@@ -365,6 +357,13 @@ Main CSS come below
   letter-spacing: 0.2em;
   color: #ffffff;
   cursor: pointer;
+}
+
+.productMain2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* size chart component */
@@ -437,6 +436,9 @@ Main CSS come below
   margin: auto; 
 }
 /* Navbar */
+.logoMain {
+  padding-bottom: 6em;
+}
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
@@ -473,12 +475,12 @@ Main CSS come below
 
 .navcontainer {
   display: block;
-  position: relative;
+  position: fixed;
   height: 100px;
 }
 
 .navcontainer .checkbox {
-  position: absolute;
+  position: fixed;
   display: block;
   height: 32px;
   width: 32px;
@@ -493,7 +495,7 @@ Main CSS come below
   display: block;
   height: 26px;
   width: 32px;
-  position: absolute;
+  position: fixed;
   top: 17px;
   right: 20px;
   z-index: 2;
@@ -538,10 +540,11 @@ Main CSS come below
 }
 
 .navbar .menuitems {
-position:absolute ;
-right: 0;
+  position:fixed;
+  right: 0;
+  top: 0;
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  height: 333vh;
+  height: 100vh;
   width: 200px;
   transform: translate(150%);
   display: flex;
@@ -552,7 +555,7 @@ right: 0;
 }
 
 .navbar .menuitems li {
-  margin-bottom: 1.2rem;
+  margin-top: 3em;
   font-size: 1.5rem;
   font-weight: 500;
 }

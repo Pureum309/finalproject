@@ -20,10 +20,8 @@ export default function Recommend({
           <link rel="icon" href="/moodyicon.svg" />
         </Head>
         <main className={styles.main}>
-          <div>
-            <Logo 
-                onClickMenu={()=>{console.log("menuClickedddd")}}
-              /> 
+          <div className={styles.logoMain}>
+            <Logo /> 
           </div>
           <h2 className={styles.recText}>Search Location, We'll find your match!</h2>
           <div className={styles.weathercard_square}>

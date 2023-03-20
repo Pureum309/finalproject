@@ -5,7 +5,9 @@ import Logo from "@/components/logo";
 export default function Product(){
     return(
         <>
-            <Logo />
+            <div className={styles.logoMain}>
+                <Logo /> 
+            </div>
             <div  productMainCont={styles.productMainCont }>
                 <ListItem limit={20} 
                     productMainItem={styles.productMainItem }
