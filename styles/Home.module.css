@@ -372,9 +372,10 @@ Main CSS come below
 .productInnerCont {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  
+  justify-content: space-around; 
   padding: 10% 0;
+  margin-left: 30px;
+  margin-top: -90px;
 }
 
 .productItem {
@@ -383,12 +384,15 @@ Main CSS come below
 }
 
 .amount {
-  font-size: 25px;
+  font-size: 40px;
+  margin-left: 40px;
+  padding: 30px;
 }
 
 .productCont button {
-  width: 100%;
-  height: 3em;
+  width: 60%;
+  height: 3.5em;
+  margin-left: 55px;
   background-color: #ef8a8a;
   border-radius: 16px;
   border: transparent;
