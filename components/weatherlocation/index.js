@@ -66,6 +66,9 @@ export default function WeatherLocation() {
       } else if (response.data.weather[0].main == "Thunderstorm") {
           setWeatherKeyword("umbrella");
           setIcon("/icons/thunderstorm.png");
+      } else if (response.data.weather[0].main == "Haze") {
+        setWeatherKeyword("umbrella");
+        setIcon("/icons/haze.png");
       }
       }).catch(err => {
         console.log(err);

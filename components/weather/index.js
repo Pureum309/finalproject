@@ -49,11 +49,11 @@ export default function Weather() {
                         setIcon("/icons/shower-rain.png");
                     } else if (response.data.weather[0].main == "Snow") {
                         setIcon("/icons/snow.png");
-                    } else if (
-                        response.data.weather[0].main == "Thunderstorm"
-                    ) {
-                        setIcon("/icons/thunderstorm.png");
-                    }
+                    } else if (response.data.weather[0].main == "Thunderstorm") 
+                        {setIcon("/icons/thunderstorm.png");
+                    } else if (response.data.weather[0].main == "Haze") 
+                        {setIcon("/icons/haze.png");
+                    } 
                 })
                 .catch((err) => {
                     console.log(err);
