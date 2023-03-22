@@ -102,6 +102,7 @@ Main CSS come below
   height: 12em;
   margin-top: -3em;
   margin-left: -39px;
+  cursor: pointer;
 }
 
 /* Weather Branch */
