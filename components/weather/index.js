@@ -15,7 +15,7 @@ export default function Weather() {
     const [weatherData, setWeatherData] = useState(null);
     const [icon, setIcon] = useState("");
 
-    var apiKey = process.env.NEXT_PUBLIC_apiKey;
+    var apiKey = process.env.NEXT_PUBLIC_apiKey_2;
     var lang = "en";
     var units = "metric";
     var location = "vancouver";

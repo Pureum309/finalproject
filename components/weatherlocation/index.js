@@ -18,7 +18,7 @@ export default function WeatherLocation() {
   // const [image, setImage] = useState("");
   const [weatherKeyword, setWeatherKeyword] = useState('Women Top and Bottom');
   
-  var apiKey = process.env.NEXT_PUBLIC_apiKey;
+  var apiKey = process.env.NEXT_PUBLIC_apiKey_2;
   var lang = "en";
   var units = "metric";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${apiKey}&lang=${lang}`
