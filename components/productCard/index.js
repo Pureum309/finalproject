@@ -18,7 +18,7 @@ export default function ProductCard(){
           page: '1'
         },
         headers: {
-          'X-RapidAPI-Key': '7c2b8fa67amshc778ca1794495a2p144c0djsn30fa174cd401',
+          'X-RapidAPI-Key': process.env.NEXT_PUBLIC_apiKey,
           'X-RapidAPI-Host': 'unofficial-shein.p.rapidapi.com'
         }
       };
